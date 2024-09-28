@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Supplies - Insumos Quirúrgicos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">MediCare Supplies</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="#login">Iniciar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner de bienvenida -->
+    <header class="jumbotron text-center bg-primary text-white" id="inicio">
+        <h1>Bienvenido a MediCare Supplies</h1>
+        <p>Descubre nuestros insumos quirúrgicos de alta calidad</p>
+    </header>
+
+    <!-- Sección de productos -->
+    <section class="container" id="productos">
+        <h2 class="text-center my-4">Nuestros Productos</h2>
+        <div class="row">
+            <!-- Producto ejemplo -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="imagen_producto.jpg" class="card-img-top" alt="Producto">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Producto</h5>
+                        <p class="card-text">Descripción breve del producto.</p>
+                        <button class="btn btn-primary">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repetir para otros productos -->
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="bg-light py-5" id="contacto">
+        <div class="container">
+            <h2 class="text-center">Contacto</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección sobre nosotros -->
+    <section class="container py-5" id="nosotros">
+        <h2 class="text-center">Sobre Nosotros</h2>
+        <p>Información sobre la historia y misión de la empresa.</p>
+    </section>
+
+    <!-- Sección de testimonios -->
+    <section class="container py-5">
+        <h2 class="text-center">Testimonios de Clientes</h2>
+        <div class="row">
+            <!-- Testimonio ejemplo -->
+            <div class="col-md-4">
+                <blockquote class="blockquote">
+                    <p class="mb-0">"Excelente calidad y servicio."</p>
+                    <footer class="blockquote-footer">Nombre del cliente</footer>
+                </blockquote>
+            </div>
+            <!-- Repetir para otros testimonios -->
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 MediCare Supplies. Todos los derechos reservados.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" class="text-white">Política de Privacidad</a></li>
+                <li class="list-inline-item"><a href="#" class="text-white">Términos de Servicio</a></li>
+            </ul>
+            <p><a href="https://api.whatsapp.com/send?phone=123456789" class="text-white">Contáctanos por WhatsApp</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
