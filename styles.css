@@ -165,3 +165,22 @@ button.next {
 button:focus {
     outline: none;
 }
+.testimonio_caja {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 5px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    height: 200px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center; 
+    margin: 15px 0; /* Margen vertical entre testimonios */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.testimonio_caja:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta 10px al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
