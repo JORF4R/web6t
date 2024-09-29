@@ -159,17 +159,17 @@ button.next {
 }
 
 .testimonial-bubble {
-    background-color: #fff; /* Fondo blanco para los testimonios */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados en cada burbuja */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    height: 200px; /* Altura fija para uniformidad */
-    display: flex; /* Flexbox para centrar el contenido */
-    flex-direction: column; /* Coloca el contenido en columna */
-    justify-content: center; /* Centra verticalmente */
-    text-align: center; /* Centra el texto */
-    margin: 15px 0; /* Margen vertical entre testimonios */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    height: 200px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center; 
+    margin: 15px 0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .testimonial-bubble:hover {
