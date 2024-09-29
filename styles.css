@@ -67,3 +67,7 @@ footer a {
             transform: translate(-50%, -50%);
             z-index: 1050; 
         }
+.star {
+    color: gold; /* Esto hace que las estrellas sean amarillas */
+    font-size: 2rem; /* Tamaño de las estrellas */
+  }
