@@ -228,7 +228,12 @@ button.next {
     transform: translateY(-10px); /* Eleva la tarjeta 10px al pasar el mouse */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
 }
-
+.customer-name {
+    margin-top: 10px; 
+    font-weight: bold; 
+    font-size: 1rem;
+    color: #333; 
+}
 /*PREGUNTAS FRECUENTES*/
 
 .faq-section {
