@@ -1,4 +1,23 @@
 var productCount = 0;
+function añadirAlCarrito(boton) {
+    productCount += 1;
+    $('#productCount').text(productCount);
+    // Obtener el contenedor de la tarjeta donde se encuentra el producto
+    const card = boton.closest('.card');
+    
+    // Obtener el nombre del producto desde el h5 con la clase 'card-title'
+    const nombreProducto = card.querySelector('.card-title').textContent;
+    
+    // Crear un nuevo elemento de lista
+    const itemLista = document.createElement('li');
+    itemLista.classList.add('list-group-item');
+    itemLista.textContent = nombreProducto;
+    
+    // Agregar el producto al listado del carrito
+    const listaCarrito = document.getElementById('lista-carrito');
+    listaCarrito.appendChild(itemLista);
+}
+
 
 $(document).ready(function () {
     // Actualizar el contador de productos
@@ -80,4 +99,3 @@ tarjetasFaq.forEach(tarjeta => {
         respuesta.classList.toggle('abierto');
     });
 });
-
