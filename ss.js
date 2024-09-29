@@ -47,14 +47,21 @@ function eliminarProducto(item) {
     $('#productCount').text(productCount);
 }
 
+let currentCategory = 'all'; // Guardamos la categoría seleccionada
+
 function filterProducts(category) {
+    currentCategory = category; // Guardar la categoría actual
     var products = document.querySelectorAll('.articulo');
     event.preventDefault(); 
     products.forEach(function(product) {
-        if (category === 'all' || product.getAttribute('data-category') === category) {
-            product.style.display = 'block';
+        const matchesCategory = (category === 'all' || product.getAttribute('data-category') === category);
+        const matchesSearch = product.textContent.toLowerCase().includes(document.querySelector("#buscador").value.toLowerCase());
+
+        // Solo muestra los productos que coincidan con la categoría y la búsqueda
+        if (matchesCategory && matchesSearch) {
+            product.classList.remove('oculto');
         } else {
-            product.style.display = 'none';
+            product.classList.add('oculto');
         }
     });
 }
@@ -121,15 +128,24 @@ function aumentar() {
 // Filtrar artículos con el buscador
 document.addEventListener("keyup", e => {
     if (e.target.matches("#buscador")) {
-        if (e.key === "Escape") e.target.value = "";
+        if (e.key === "Escape") e.target.value = ""; // Limpia la búsqueda al presionar Escape
 
-        document.querySelectorAll(".articulo").forEach(fruta => {
-            fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-                ? fruta.classList.remove("filtro")
-                : fruta.classList.add("filtro");
+        var products = document.querySelectorAll('.articulo');
+        products.forEach(function(product) {
+            const matchesSearch = product.textContent.toLowerCase().includes(e.target.value.toLowerCase());
+            const matchesCategory = (currentCategory === 'all' || product.getAttribute('data-category') === currentCategory);
+
+            // Solo muestra los productos que coincidan con la búsqueda y la categoría
+            if (matchesSearch && matchesCategory) {
+                product.classList.remove('oculto');
+            } else {
+                product.classList.add('oculto');
+            }
         });
     }
 });
+
+
 
 // Carrusel
 const carousel = document.querySelector('.carousel');
