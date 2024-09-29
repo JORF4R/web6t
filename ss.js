@@ -1,7 +1,8 @@
+var productCount = 0;
+
 $(document).ready(function () {
-    // Actualizar el contador de productos (esto debería estar basado en la lógica de tu aplicación)
-    var productCount = 2; // Ejemplo: hay 2 productos en el carrito
-    $('#productCount').text(productCount);
+    // Actualizar el contador de productos
+    $('#productCount').text(productCount);  // Ajustamos a jQuery en ambas funciones
 
     // Mostrar/ocultar el carrito al hacer clic en el botón del carrito
     $('#cartButton').click(function () {
@@ -9,31 +10,33 @@ $(document).ready(function () {
     });
 
     // Cerrar el carrito al hacer clic fuera de él
-    $(document).click(function(event) {
+    $(document).click(function (event) {
         if (!$(event.target).closest('#cartButton, #cartCard').length) {
             $('#cartCard').hide();
         }
     });
 });
-//camilo esta muy loco
-document.addEventListener("keyup", e=>{
 
-    if (e.target.matches("#buscador")){
-  
-        if (e.key ==="Escape")e.target.value = ""
-  
-        document.querySelectorAll(".articulo").forEach(fruta =>{
-  
+// Función para aumentar el número de productos en el carrito
+function aumentar() {
+    productCount += 1;
+    $('#productCount').text(productCount);  // Usar jQuery consistentemente
+}
+
+// Filtrar artículos con el buscador
+document.addEventListener("keyup", e => {
+    if (e.target.matches("#buscador")) {
+        if (e.key === "Escape") e.target.value = "";
+
+        document.querySelectorAll(".articulo").forEach(fruta => {
             fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-              ?fruta.classList.remove("filtro")
-              :fruta.classList.add("filtro")
-        })
-  
+                ? fruta.classList.remove("filtro")
+                : fruta.classList.add("filtro");
+        });
     }
-  
-  
-  })
-//CARRUSELSILLOOOOO
+});
+
+// Carrusel
 const carousel = document.querySelector('.carousel');
 const slides = document.querySelectorAll('.carousel-slide');
 const prevButton = document.querySelector('.prev');
@@ -61,19 +64,19 @@ prevButton.addEventListener('click', () => {
 // Función para iniciar el carrusel automático
 function startAutoCarousel() {
     setInterval(() => {
-        currentIndex = (currentIndex + 1) % slides.length; 
-        updateCarousel(); 
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
     }, 3000);
 }
 startAutoCarousel();
+
+// FAQs
 const tarjetasFaq = document.querySelectorAll('.tarjeta-faq');
 
-// Agrega un evento de clic a cada tarjeta
+// Agregar evento de clic a cada tarjeta
 tarjetasFaq.forEach(tarjeta => {
     tarjeta.addEventListener('click', () => {
         const respuesta = tarjeta.querySelector('.respuesta');
-
-   
         respuesta.classList.toggle('abierto');
     });
 });
