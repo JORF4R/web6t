@@ -71,3 +71,43 @@ footer a {
     color: gold; /* Esto hace que las estrellas sean amarillas */
     font-size: 2rem; /* Tamaño de las estrellas */
   }
+.buscandoando{
+position: absolute;
+padding: 5px;
+  }
+  
+.filtro{
+    display: none;
+}
+  .buscandoando input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+  }
+  .btnn {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: #440088;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .buscar:hover input {
+    width: 240px;
+  }
+  
+  .buscar input:focus {
+    width: 240px;
+  }
