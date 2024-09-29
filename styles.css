@@ -14,9 +14,7 @@ header.jumbotron {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-footer {
-    background-color: #343a40;
-}
+
 
 footer a {
     color: #ffc107;
@@ -160,27 +158,21 @@ button.next {
     right: 0;
 }
 
-
-
-button:focus {
-    outline: none;
-}
-.testimonio_caja {
-    background-color: #fff; 
-    padding: 20px;
-    border-radius: 5px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    height: 200px;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    text-align: center; 
+.testimonial-bubble {
+    background-color: #fff; /* Fondo blanco para los testimonios */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados en cada burbuja */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    height: 200px; /* Altura fija para uniformidad */
+    display: flex; /* Flexbox para centrar el contenido */
+    flex-direction: column; /* Coloca el contenido en columna */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto */
     margin: 15px 0; /* Margen vertical entre testimonios */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
 
-.testimonio_caja:hover {
+.testimonial-bubble:hover {
     transform: translateY(-10px); /* Eleva la tarjeta 10px al pasar el mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
 }
-
