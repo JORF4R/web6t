@@ -12,7 +12,27 @@ header.jumbotron {
 .card {
     border: 1px solid #e0e0e0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer; /* Cambiar el cursor para indicar que es clicable */
 }
+
+
+.card.expanded {
+    transform: scale(1.05); /* Agrandar la card */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+.category-sidebar {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 
 .floating-btn2 a {
             text-decoration: none; /* Quita el subrayado */
@@ -85,6 +105,10 @@ footer a {
             max-height: 200px; /* Limitar la altura máxima del contenedor */
             overflow-y: auto;  /* Activar el scroll vertical cuando sea necesario */
         }
+        .list-group-item .btn-danger {
+            margin-left: 10px;
+        }
+        
    #loginCard {
             display: none; 
             position: fixed; 
