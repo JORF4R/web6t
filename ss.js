@@ -15,6 +15,7 @@ $(document).ready(function () {
         }
     });
 });
+//camilo esta muy loco
 document.addEventListener("keyup", e=>{
 
     if (e.target.matches("#buscador")){
