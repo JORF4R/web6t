@@ -78,6 +78,13 @@ footer a {
             display: none; /* Oculta la card inicialmente */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+        .card-body {
+            padding: 15px; /* Espaciado interno */
+        }
+        #lista-carrito {
+            max-height: 200px; /* Limitar la altura máxima del contenedor */
+            overflow-y: auto;  /* Activar el scroll vertical cuando sea necesario */
+        }
    #loginCard {
             display: none; 
             position: fixed; 
