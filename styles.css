@@ -15,7 +15,9 @@ header.jumbotron {
     transition: all 0.3s ease;
     cursor: pointer; /* Cambiar el cursor para indicar que es clicable */
 }
-
+.oculto {
+    display: none;
+}
 
 .card.expanded {
     transform: scale(1.05); /* Agrandar la card */
