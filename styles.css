@@ -14,7 +14,9 @@ header.jumbotron {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-
+footer {
+    background-color: #343a40;
+}
 
 footer a {
     color: #ffc107;
@@ -33,7 +35,29 @@ footer a {
             align-items: center;
             font-size: 1.5rem;
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+        }
+        .floating-btn2 a {
+            text-decoration: none; /* Quita el subrayado */
+            color: inherit; /* Mantiene el color del icono o el especificado en el SVG */
+        }
+        
+        .floating-btn2 {
+            
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
         }
 
         /* Estilo para el número de productos */
@@ -109,6 +133,7 @@ padding: 5px;
   .buscar input:focus {
     width: 240px;
   }
+
 /*CARRUSEL*/
   .carousel-container {
     position: relative;
@@ -158,21 +183,8 @@ button.next {
     right: 0;
 }
 
-.testimonial-bubble {
-    background-color: #fff; 
-    padding: 20px; 
-    border-radius: 5px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    height: 200px; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-    text-align: center; 
-    margin: 15px 0; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
 
-.testimonial-bubble:hover {
-    transform: translateY(-10px); /* Eleva la tarjeta 10px al pasar el mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+
+button:focus {
+    outline: none;
 }
