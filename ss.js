@@ -65,3 +65,15 @@ function startAutoCarousel() {
     }, 3000);
 }
 startAutoCarousel();
+const tarjetasFaq = document.querySelectorAll('.tarjeta-faq');
+
+// Agrega un evento de clic a cada tarjeta
+tarjetasFaq.forEach(tarjeta => {
+    tarjeta.addEventListener('click', () => {
+        const respuesta = tarjeta.querySelector('.respuesta');
+
+   
+        respuesta.classList.toggle('abierto');
+    });
+});
+
