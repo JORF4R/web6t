@@ -37,7 +37,9 @@ function añadirAlCarrito(boton) {
     const listaCarrito = document.getElementById('lista-carrito');
     listaCarrito.appendChild(itemLista);
 }
-
+function goBack() {
+    window.history.back();
+}
 function eliminarProducto(item) {
     // Remover el elemento de la lista del carrito
     item.remove();
