@@ -264,3 +264,9 @@ button.next {
 #sobre-nosotros strong {
     color:  #007bff; 
 }
+.btn.btn-secondary.mt-2 {
+    background-color: transparent;
+    color: black;
+    text-decoration: underline;
+    border: none;
+}
