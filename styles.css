@@ -14,7 +14,28 @@ header.jumbotron {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-
+.floating-btn2 a {
+            text-decoration: none; /* Quita el subrayado */
+            color: inherit; /* Mantiene el color del icono o el especificado en el SVG */
+        }
+        
+        .floating-btn2 {
+            
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+        }
 
 footer a {
     color: #ffc107;
